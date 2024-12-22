@@ -5,11 +5,7 @@
 function getArrayFrecuency(arrayNumeros, maxNumber) {
     const arrayFrecuencia = new Array(maxNumber + 1).fill(0);
 
-    console.log(arrayFrecuencia);
-
     arrayNumeros.forEach((number) => (arrayFrecuencia[number] += 1));
-
-    console.log(arrayFrecuencia);
 
     return arrayFrecuencia;
 }
