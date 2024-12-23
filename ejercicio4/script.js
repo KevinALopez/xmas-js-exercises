@@ -1,9 +1,10 @@
 function isNewProduct(inventario, operation) {
     if (inventario.hasOwnProperty(operation.producto)) return false;
-
-    inventario[operation.producto] = 0;
-
     return true;
+}
+
+function createNewProduct(inventario, operation) {
+    inventario[operation.producto] = 0;
 }
 
 function isValidOperation(inventario, operation) {
@@ -25,7 +26,8 @@ function isValidOperation(inventario, operation) {
 }
 
 function executeOperation(inventario, operation) {
-    isNewProduct(inventario, operation);
+    if (isNewProduct(inventario, operation))
+        createNewProduct(inventario, operation);
 
     if (!isValidOperation(inventario, operation)) return;
 

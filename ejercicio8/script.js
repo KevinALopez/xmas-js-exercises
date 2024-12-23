@@ -7,7 +7,7 @@ function contarVocales(string) {
         u: 0,
     };
 
-    for (let char of string) {
+    for (let char of string.toLowerCase()) {
         if (char === "a") cantidadVocales.a += 1;
         if (char === "e") cantidadVocales.e += 1;
         if (char === "i") cantidadVocales.i += 1;
